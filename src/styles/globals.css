@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import "./variables.css";
+@import "./glassmorphism.css";
+
+/* Core Reset and Base Setup */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    color-scheme: dark;
+    background-color: #000000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #000000;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .text-neon {
+    color: #39FF14;
+  }
+
+  .text-neon-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #00E676 50%, #39FF14 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-neon-glow {
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+  }
+
+  .bg-void {
+    background-color: #000000;
+  }
+
+  .bg-surface-elevated {
+    background-color: #121212;
+  }
+
+  .bg-surface-card {
+    background-color: #1A1A1A;
+  }
+
+  .border-subtle {
+    border-color: #2A2A2A;
+  }
+
+  /* Focus indicator for keyboard navigation (WCAG 2.1 AA) */
+  .focus-neon:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #000000, 0 0 0 3px #39FF14;
+  }
+
+  input.focus-neon:focus,
+  textarea.focus-neon:focus,
+  select.focus-neon:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #000000, 0 0 0 2px #39FF14;
+    border-color: #39FF14;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #39FF14;
+}
+

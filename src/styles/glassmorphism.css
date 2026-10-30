@@ -1,0 +1,67 @@
+/* High-Performance Black Glassmorphism Engine */
+.glass-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 26, 0.75) 0%,
+    rgba(18, 18, 18, 0.60) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 
+    0 10px 30px -5px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+  transition: transform 0.15s ease-out, border-color 0.15s ease, box-shadow 0.15s ease;
+  contain: content;
+}
+
+.glass-panel:hover {
+  border-color: var(--border-active);
+  box-shadow: 
+    0 16px 40px -5px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(57, 255, 20, 0.20),
+    inset 0 1px 0 0 rgba(57, 255, 20, 0.25);
+  transform: translateY(-2px);
+}
+
+.glass-card-interactive {
+  background: rgba(26, 26, 26, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  transition: transform 0.15s ease-out, border-color 0.15s ease, box-shadow 0.15s ease;
+  contain: content;
+}
+
+.glass-card-interactive:hover {
+  border-color: rgba(57, 255, 20, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.8), 0 0 18px rgba(57, 255, 20, 0.15);
+}
+
+/* Neon Glow Accents */
+.neon-glow-subtle {
+  box-shadow: var(--glow-subtle);
+}
+
+.neon-glow-medium {
+  box-shadow: var(--glow-medium);
+}
+
+.neon-glow-intense {
+  box-shadow: var(--glow-intense);
+}
+
+.neon-border-pulse {
+  border-color: var(--accent-primary);
+  animation: neonBorderPulse 3s infinite ease-in-out;
+}
+
+@keyframes neonBorderPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2), inset 0 0 5px rgba(57, 255, 20, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.45), inset 0 0 10px rgba(57, 255, 20, 0.2);
+  }
+}

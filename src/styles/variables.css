@@ -1,0 +1,33 @@
+:root {
+  /* 90% Base Canvas & Surfaces */
+  --bg-primary: #000000;
+  --bg-secondary: #121212;
+  --surface-card: #1A1A1A;
+  
+  /* 10% Precision Accents */
+  --accent-primary: #39FF14;
+  --accent-secondary: #00C853;
+  --accent-hover: #00E676;
+  
+  /* Typography Tokens */
+  --text-primary: #FFFFFF;
+  --text-secondary: #BDBDBD;
+  --text-muted: #757575;
+  
+  /* Border Tokens */
+  --border-subtle: #2A2A2A;
+  --border-active: rgba(57, 255, 20, 0.45);
+  --border-focus: #39FF14;
+
+  /* Glassmorphism Tokens */
+  --glass-bg: rgba(26, 26, 26, 0.70);
+  --glass-bg-hover: rgba(30, 30, 30, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+
+  /* Neon Green Glow Shadows */
+  --glow-subtle: 0 0 15px rgba(57, 255, 20, 0.20);
+  --glow-medium: 0 0 30px rgba(57, 255, 20, 0.35);
+  --glow-intense: 0 0 50px rgba(57, 255, 20, 0.60);
+}
+
