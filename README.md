@@ -35,7 +35,7 @@ This portfolio serves as both an interactive digital resume and a showcase of hi
 ### 1. Interactive 3D WebGL Experiences
 - **Floating 3D Portrait Card**: Custom 3D tilt mechanics driven by pointer coordinate deltas, paired with concentric orbiting toruses and technology badges.
 - **Fibonacci 3D Skill Sphere**: Interactive Three.js point-cloud sphere distributing core languages and frameworks evenly on a spherical surface.
-- **Interactive 3D Earth Globe**: WebGL coordinate pin highlighting Meet's location (Bhopal, India ~ 23°N, 77°E) with pulsing atmospheric glow rings.
+- **Interactive 3D Earth Globe**: WebGL coordinate pin highlighting Meet's location (Surat, Gujarat, India ~ 21°N, 73°E) with pulsing atmospheric glow rings.
 - **Viewport Throttling**: Intelligent `IntersectionObserver` halts off-screen 3D canvas render loops (`frameloop="never"`), reclaiming up to 66% GPU resources while navigating.
 
 ### 2. High-Performance UI & Interaction Engine
@@ -151,7 +151,7 @@ This portfolio serves as both an interactive digital resume and a showcase of hi
 - Portfolio: [meetpatel.dev](https://meetpatel.dev)
 - GitHub: [@meet-patel12](https://github.com/meet-patel12)
 - LinkedIn: [Meet Patel](https://linkedin.com/in/meetpatel)
-- Email: [meetpatel@gmail.com](mailto:meetpatel@gmail.com)
+- Email: [meetviral120@gmail.com](mailto:meetviral120@gmail.com)
 
 ---
 

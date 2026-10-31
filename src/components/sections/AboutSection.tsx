@@ -115,7 +115,7 @@ export const AboutSection: React.FC = () => {
               <h3 className="text-base font-display font-bold text-white">Education</h3>
             </div>
             <h4 className="text-sm font-semibold text-white">B.Tech in Computer Science</h4>
-            <p className="text-xs text-[#39FF14] font-mono mt-0.5">Bhopal, India</p>
+            <p className="text-xs text-[#39FF14] font-mono mt-0.5">Surat, Gujarat, India</p>
             <p className="text-xs text-[#BDBDBD] mt-3 leading-relaxed">
               In-depth coursework in Data Structures, Algorithms, Distributed Systems, DBMS, and Software Engineering.
             </p>

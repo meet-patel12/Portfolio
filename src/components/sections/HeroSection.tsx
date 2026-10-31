@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { ArrowDown, Download, Eye, Sparkles } from 'lucide-react';
+import { ArrowDown, Download, Eye, Sparkles, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
 import { GlassButton } from '@/components/ui/GlassButton';
 import { MagneticButton } from '@/components/ui/MagneticButton';
@@ -137,6 +137,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ rightSlot }) => {
                   aria-label="Twitter Profile"
                 >
                   <TwitterIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={`mailto:${PERSONAL_INFO.emails.primary}`}
+                  className="p-2.5 rounded-full bg-[#121212] border border-[#2A2A2A] text-[#BDBDBD] hover:text-[#39FF14] hover:border-[#39FF14]/50 hover:shadow-[0_0_15px_rgba(57,255,20,0.2)] transition-all"
+                  aria-label="Send Email"
+                >
+                  <Mail className="w-4 h-4" />
                 </a>
               </div>
 

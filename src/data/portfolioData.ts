@@ -52,11 +52,11 @@ export const PERSONAL_INFO = {
   greeting: "Hello, World — I'm",
   tagline: "Engineering AI-Startup Tier 3D Web Experiences & Scalable Systems",
   bio: "Full Stack Engineer specializing in React, Next.js, TypeScript, Node.js, and Three.js. Passionate about marrying high-performance system architectures with cinematic, 60 FPS WebGL interactions.",
-  location: "Bhopal, India",
+  location: "Surat, Gujarat, India",
   availability: "Available for Work",
   statusMessage: "Open for Full-time Roles & High-Impact Contracts",
   emails: {
-    primary: "meetpatel@gmail.com",
+    primary: "meetviral120@gmail.com",
   },
   socials: {
     github: "https://github.com/meet-patel12",

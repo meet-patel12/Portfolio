@@ -53,7 +53,7 @@ const GlobeSphere: React.FC<GlobeSphereProps> = React.memo(({ reducedMotion }) =
         />
       </mesh>
 
-      {/* Meet's Coordinate Pin (Bhopal, India ~ 23°N, 77°E) */}
+      {/* Meet's Coordinate Pin (Surat, Gujarat, India ~ 21°N, 73°E) */}
       <group position={[0.8, 0.75, 1.55]}>
         <mesh ref={markerRef}>
           <sphereGeometry args={[0.07, 16, 16]} />
