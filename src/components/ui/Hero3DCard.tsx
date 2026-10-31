@@ -78,13 +78,13 @@ export const Hero3DCard: React.FC = React.memo(() => {
       >
         {/* Inner Card Container */}
         <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-[#1A1A1A]">
-          {/* Portrait Image (Optimized WebP, 77 KB) */}
+          {/* Portrait Image (Optimized WebP) */}
           <img
-            src="/images/yusuf-avatar.webp"
+            src="/images/meet-avatar.webp"
             alt={PERSONAL_INFO.fullName}
             width={320}
             height={450}
-            className="w-full h-full object-cover object-top filter grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
+            className="w-full h-full object-cover object-[45%_top] filter grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
             loading="eager"
             decoding="async"
           />
