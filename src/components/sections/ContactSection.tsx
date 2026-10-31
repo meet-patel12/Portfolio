@@ -16,16 +16,55 @@ export const ContactSection: React.FC = () => {
 
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setStatus('submitting');
-    // Simulated async submission
-    setTimeout(() => {
+
+    try {
+      // Send directly to Meet's email via FormSubmit AJAX endpoint
+      const response = await fetch(`https://formsubmit.co/ajax/${PERSONAL_INFO.emails.primary}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          Name: formData.name,
+          Email: formData.email,
+          'Project Scope': formData.projectType,
+          Message: formData.message,
+          _subject: `Portfolio Inquiry: ${formData.projectType} from ${formData.name}`,
+          _template: 'table',
+        }),
+      });
+
+      const data = await response.json().catch(() => null);
+
+      if (response.ok || (data && data.success !== 'false')) {
+        setStatus('success');
+        setFormData({ name: '', email: '', projectType: 'Full Stack Web App', message: '' });
+      } else {
+        // Fallback: If endpoint requires activation or block, open mail client pre-filled
+        const mailtoUrl = `mailto:${PERSONAL_INFO.emails.primary}?subject=${encodeURIComponent(
+          `Portfolio Inquiry: ${formData.projectType} from ${formData.name}`
+        )}&body=${encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\nScope: ${formData.projectType}\n\nMessage:\n${formData.message}`
+        )}`;
+        window.location.href = mailtoUrl;
+        setStatus('success');
+      }
+    } catch {
+      // Direct mailto fallback on network error / ad-blocker
+      const mailtoUrl = `mailto:${PERSONAL_INFO.emails.primary}?subject=${encodeURIComponent(
+        `Portfolio Inquiry: ${formData.projectType} from ${formData.name}`
+      )}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nScope: ${formData.projectType}\n\nMessage:\n${formData.message}`
+      )}`;
+      window.location.href = mailtoUrl;
       setStatus('success');
-      setFormData({ name: '', email: '', projectType: 'Full Stack Web App', message: '' });
-    }, 1000);
+    }
   };
 
   return (
